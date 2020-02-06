@@ -25,16 +25,7 @@ LOCAL_PATH := device/samsung/j5-common
 
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += \
-	$(LOCAL_PATH)/overlay \
-	$(LOCAL_PATH)/overlay-lineage
-
-# Include package config fragments
-include $(LOCAL_PATH)/product/*.mk
-
-# append the updater uri to the product properties if set
-ifneq ($(CM_UPDATER_OTA_URI),)
-	PRODUCT_PROPERTY_OVERRIDES += $(CM_UPDATER_OTA_URI)
-endif
+	$(LOCAL_PATH)/overlay
 
 # Inhert dalvik heap values from aosp
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
