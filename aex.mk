@@ -2,8 +2,7 @@
 PRODUCT_RELEASE_NAME := Samsung Galaxy J5
 
 # Boot animation
-TARGET_SCREEN_WIDTH := 720
-TARGET_SCREEN_HEIGHT := 1280
+TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit some common AEX stuff.
 $(call inherit-product, vendor/aosp/common.mk)
