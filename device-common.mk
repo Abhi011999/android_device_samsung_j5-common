@@ -27,5 +27,8 @@ LOCAL_PATH := device/samsung/j5-common
 DEVICE_PACKAGE_OVERLAYS += \
 	$(LOCAL_PATH)/overlay
 
+# Include package config fragments
+include $(LOCAL_PATH)/product/*.mk
+
 # Inhert dalvik heap values from aosp
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
